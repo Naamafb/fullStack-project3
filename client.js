@@ -68,26 +68,8 @@ document.addEventListener("click", (event) => {
       xhr.send(null);
       console.log(xhr.responseText)
   }
-  var pxhr = new FXMLHttpRequest();
-
-      pxhr.open("GET", "/contacts");
-
-      // xhr.onreadystatechange = function() {
-      // if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-      //     const response = JSON.parse(this.responseText);
-      //     console.log(response);
-      //     }
-      // };
-
-      pxhr.onload= function(){
-        //document.getElementById("demo").innerHTML = JSON.parse(this.responseText);
-        console.log(this.responseText)
-      };
-
-      pxhr.send(null);
-      console.log(pxhr.responseText)
-  }
-);
+}
+  );
 
   class user{
     constructor(name, pass){
