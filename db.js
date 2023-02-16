@@ -4,25 +4,25 @@ function setRecordsInDatabase(records) {
   }
  
  // return all records from database 
-function getAllRecords() {
-    let records = localStorage.getItem('records');
-    if (records) {
-      return JSON.parse(records);
-    } else {
-      return [];
-    }
-  }
+// function getAllContacts() {
+//     let records = localStorage.getItem('records');
+//     if (records) {
+//       return JSON.parse(contacts);
+//     } else {
+//       return [];
+//     }
+//   }
   
-  // Add record to database 
-  function addRecord(record) {
-    let records = getAllRecords();
-    records.push(record);
-    localStorage.setItem('records', JSON.stringify(records));
-  }
+  // // Add record to database 
+  // function addContact(record) {
+  //   let records = getAllContacts();
+  //   records.push(record);
+  //   localStorage.setItem('records', JSON.stringify(records));
+  // }
 
 
  
-  // Update a record in the database by ID
+ // Update a record in the database by ID
 function updateRecordById(id, updatedRecord) {
     const records = getRecordsFromDatabase();
     const index = records.findIndex((record) => record.id === id);
