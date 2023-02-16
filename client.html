@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A Single Page Application</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="client.css">
+    <!--  -->
+</head>
+<body>
+    <template id="login-template">
+        <div id="login-form">
+          <h3>Login</h3>
+          <div>
+            <label for="login-username">Username:</label>
+            <input type="text" id="login-username" required>
+          </div>
+          <div>
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" required>
+          </div>
+          <button type="submit" id="login-button">Login</button>
+          <p id="toggle-form">Not a member? <a href="#">Sign up</a></p>
+        </div>
+      </template>
+      
+      <template id="register-template">
+        <div id="register-form">
+          <h3>Sign Up</h3>
+          <div>
+            <label for="register-username">Username:</label>
+            <input type="text" id="register-username" required>
+          </div>
+          <div>
+            <label for="register-email">Email:</label>
+            <input type="email" id="register-email" required>
+          </div>
+          <div>
+            <label for="register-password">Password:</label>
+            <input type="password" id="register-password" required>
+          </div>
+          <div>
+            <label for="register-password-Confirm">Password Confirm:</label>
+            <input type="password-Confirm" id="register-password-Confirm" required>
+          </div>
+          <button id="register-button">Sign Up</button>
+          <p id="toggle-form">Already a member? <a href="#">Log in</a></p>
+        </div>
+      </template>
+      
+
+    <script src="client.js"></script>
+</body>
+</html>

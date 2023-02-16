@@ -1,0 +1,31 @@
+#login-form, #register-form {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  label, input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #toggle-form {
+    text-align: center;
+    margin-top: 20px;
+  }
