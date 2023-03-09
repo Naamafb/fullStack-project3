@@ -1,31 +1,161 @@
-#login-form, #register-form {
+*{
+  font-style: oblique;
+}
+#login-form, #register-form ,#main-form, #add-form,#edit-form{
     width: 400px;
     margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
+    padding: 50px;
+    margin-top:100px;
+    border: 2px dotted black;
+    display: block;
+    font-family: Calibri;
   }
+  #main-form{
+    width: 500px;
+  }
+  #register-form{
+    margin-top:1%;
+    margin-bottom: 1%;
+  }
+  #cancelAndDelete{
+    display: flex;
+  justify-content:space-between;
+  margin-top:20px;
+  margin-right:auto;
+  margin-left: auto;
+  margin-bottom:20px;
   
+  }
+  #delete{
+    cursor: pointer;
+  }
+  #cancle {
+    text-align: center;
+    padding-bottom: 20px;
+    width:25%;
+    height:2%;
+    padding:5px;
+    margin-left:4%;
+    margin-top: 45px;
+  }
+  #edit-form{
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  #myContacts{
+    margin-top:5px;
+  }
   h3 {
     text-align: center;
     margin-bottom: 20px;
+    size:0px;
   }
   
   label, input {
     display: block;
-    width: 100%;
+    width: 80%;
     padding: 10px;
     margin-bottom: 20px;
+    justify-content: center;
+   margin-left: auto;
+  margin-right: auto;
   }
-  
-  button {
-    width: 100%;
+
+  #login-button, #register-button, #add-contact-button,#updateContact {
+    width:100%;
     padding: 10px;
     background-color: #4CAF50;
     color: white;
     cursor: pointer;
+    width: 30%;
+    justify-content: center;
+    margin-left:35%; 
+    border-radius:5%;
+    margin-top: 10px;
+    margin-bottom:10px;
+    height: auto;
+  }
+  #addContacts{
+    width:auto;
   }
   
   #toggle-form {
     text-align: center;
     margin-top: 20px;
   }
+  #deleteContact{
+    width:50px;
+    height:50px;
+    margin-top:10px;
+    justify-content:center;
+  }
+  
+  img {
+    object-fit: cover;
+    width:32px;
+    height:32px;
+    margin-top:10px;
+    margin-bottom: 5px;
+    border: 2px solid black;
+    padding:3px;
+  }
+ #back, #logOut{
+  margin-top:10px;
+  margin-left:10px;
+  height:30px;
+  width:30px;
+  cursor: pointer;
+ }
+#userName{
+  text-align: center;
+  margin-top:10px;
+ }
+ #contacts{
+  text-align: left;
+  margin-top:20px;
+ }
+ /* Style the search field */
+ * {
+  box-sizing: border-box;
+}
+
+ form.serchInputAndBottom input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.serchInputAndBottom  button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #4CAF50;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.serchInputAndBottom  button:hover {
+  background: #126e15;
+}
+
+div.userContacts {
+  width: 50%;
+  margin-right: 80%;
+}
+
+div.myContacts button{
+  color: #074e09;
+  width: 50%;
+  margin-right: 80%;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+}
+

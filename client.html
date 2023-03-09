@@ -2,62 +2,130 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>A Single Page Application</title>
+    <title>Contact aplication</title>
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="client.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--  -->
 </head>
 <body>
+
+  <!--
+  <a href="#" onclick="showTemplate('main-template')">main</a>
+  <a href="#" onclick="showTemplate('login-template')">login</a>
+  <a href="#" onclick="showTemplate('register-template')">register</a>--->
+
   <template id="main-template">
     <div id="main-form">
-      <h3>main</h3>
-      
-      <button type= id="allContacts-button">all contacts</button>
+      <img  id ="logOut" src="data:image/png;base64,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" <button onclick="logOut()"/>
+      <h2 id="userName"></h2>
+      <form class="serchInputAndBottom"  id="serchInputAndBottom">
+       <input type="text" id="name-input" placeholder="Enter name">
+       <button  type= id="searchContacts" onclick="searchContact()"><i class="fa fa-search"></i></button>
+      </form>
+      <div class="userContacts">
+        <h3 id="contacts">Your contacts:</h3>
+        <button type= id="addContacts" onclick="showTemplate('add-contact-template')" >+</button>
+        <div class="myContacts" id="myContacts"></div>
+      </div>
+    </div>
+  </template>
+  
+  <template id="login-template">
+    <div id="login-form">
+      <h3>Login</h3>
+      <div>
+        <label for="login-username">Username:</label>
+        <input type="text" id="login-username" required>
+      </div>
+      <div>
+        <label for="login-password">Password:</label>
+        <input type="password" id="login-password" required>
+      </div>
+      <button type="submit" id="login-button" onclick="checkForLogin()">Login</button>
+      <p id="toggle-form">Not a member? <a href="#" onclick="showTemplate('register-template')">Sign up</a></p>
+    </div>
+  </template>
+  
+  <template id="register-template">
+    <div id="register-form">
+      <h3>Sign Up</h3>
+      <div>
+        <label for="register-username">Username:</label>
+        <input type="text" id="register-username" required>
+      </div>
+      <div>
+        <label for="register-email">Email:</label>
+        <input type="email" id="register-email" required>
+      </div>
+      <div>
+        <label for="register-password">Password:</label>
+        <input type="password" id="register-password" required>
+      </div>
+      <div>
+        <label for="register-password-Confirm">Password Confirm:</label>
+        <input type="password" id="register-password-Confirm" required>
+      </div>
+      <button id="register-button" onclick="RegisterProcess()">Sign Up</button>
+      <p id="toggle-form">Already a member? <a href="#" onclick="showTemplate('login-template')">Log in</a></p>
     </div>
   </template>
 
+  <template id="add-contact-template">
+    <div id="add-form">
+      <img  id ="back" src="http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/back-arrow.png"<button id="cancleAdd" onclick="showTemplate('main-template')"/>
 
-    <template id="login-template">
-        <div id="login-form">
-          <h3>Login</h3>
-          <div>
-            <label for="login-username">Username:</label>
-            <input type="text" id="login-username" required>
-          </div>
-          <div>
-            <label for="login-password">Password:</label>
-            <input type="password" id="login-password" required>
-          </div>
-          <button type="submit" id="login-button">Login</button>
-          <p id="toggle-form">Not a member? <a href="#">Sign up</a></p>
+      <h3>Add new contacts</h3>
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="contact-name" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="contact-email" required>
+      </div>
+      <div>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="contact-phone" required>
+      </div>
+      <button id="add-contact-button" onclick="addNewContact()">Save</button>
+    </div>
+  </template>
+
+  <template id="edit-contact-template">
+    <div id="edit-form">
+      <h3 id="contactName"></h3>
+      <div id="contactDetails">
+        <div id="name">
+          <label for="name">Name:</label>
+         
         </div>
-      </template>
-      
-      <template id="register-template">
-        <div id="register-form">
-          <h3>Sign Up</h3>
-          <div>
-            <label for="register-username">Username:</label>
-            <input type="text" id="register-username" required>
-          </div>
-          <div>
-            <label for="register-email">Email:</label>
-            <input type="email" id="register-email" required>
-          </div>
-          <div>
-            <label for="register-password">Password:</label>
-            <input type="password" id="register-password" required>
-          </div>
-          <div>
-            <label for="register-password-Confirm">Password Confirm:</label>
-            <input type="password-Confirm" id="register-password-Confirm" required>
-          </div>
-          <button id="register-button">Sign Up</button>
-          <p id="toggle-form">Already a member? <a href="#">Log in</a></p>
+        <div id="email">
+          <label for="email">Email:</label>
+
         </div>
-      </template>
-      
+        <div id="phone">
+          <label for="phone">Phone:</label>
+
+        </div>
+
+      </div>
+      <button id="updateContact" onclick="updateContact()">Save</button>
+      <div id="cancelAndDelete">
+       <img id="back" src="http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/back-arrow.png"<button id="cancle" onclick="showTemplate('main-template')"/>
+       <img id="delete" src="data:image/png;base64,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"<button id="deleteContact" onclick="deleteContact()"/>
+      </div>
+    </div>
+  </template>
+  
+  <div id="target-element">
+    <!-- This is where the selected template will be displayed -->
+  </div>
+
 
     <script src="client.js"></script>
+    <script src="server.js"></script>
+    <script src="db.js"></script>
+    <script src="network.js"></script>
 </body>
 </html>
